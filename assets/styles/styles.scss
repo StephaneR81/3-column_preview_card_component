@@ -45,8 +45,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    align-items: center;
-    width: 100%;
+    height: 100%;
 }
 
 .cards {
@@ -137,4 +136,33 @@ main {
 }
 
 // DESKTOP
-@media screen and (min-width: 1440px) {}
+@media screen and (min-width: 1440px) {
+    .cards {
+        display: flex;
+        max-width: initial;
+        width: 850px;
+
+        .card {
+            margin: 0;
+            padding: 35px;
+
+            .text {
+                height: 150px;
+            }
+
+            .button {
+                margin-top: 50px;
+            }
+        }
+
+        .card:nth-child(1) {
+            border-radius: 10px 0 0 10px;
+
+        }
+
+        .card:nth-child(3) {
+            border-radius: 0 10px 10px 0;
+        }
+
+    }
+}
