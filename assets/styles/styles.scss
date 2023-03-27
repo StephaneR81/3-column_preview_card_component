@@ -1,3 +1,139 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+// Colors
+$brightOrange: hsl(31, 77%, 52%);
+$darkCyan: hsl(184, 100%, 22%);
+$veryDarkCyan: hsl(179, 100%, 13%);
+
+$transparentWhite: hsla(0, 0%, 100%, 0.75);
+$veryLightGray: hsl(0, 0%, 95%);
+
 * {
     box-sizing: border-box;
 }
+
+// Reset CSS
+html {
+    min-height: 100vh;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p,
+article {
+    margin: 0;
+    padding: 0;
+}
+
+
+// MOBILE
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    width: 100%;
+}
+
+.cards {
+    max-width: 375px;
+
+    .card {
+        margin: 0 20px;
+        padding: 50px;
+
+        .icon {
+            width: 60px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .title {
+            margin-top: 20px;
+            font-family: 'Big Shoulders Display', Arial, Helvetica, sans-serif;
+            font-size: 35px;
+            color: $veryLightGray;
+        }
+
+        .text {
+            font-size: 17px;
+            margin-top: 15px;
+            line-height: 25px;
+            color: $transparentWhite;
+        }
+
+        .button {
+            margin-top: 20px;
+            border-radius: 50px;
+            border: 2px solid transparent;
+            padding: 10px 20px;
+            font-weight: bold;
+            transition: all 0.2s;
+
+            &:hover {
+                cursor: pointer;
+                background-color: transparent;
+                border: 2px solid $transparentWhite;
+            }
+        }
+    }
+
+    .card:nth-child(1) {
+        background-color: $brightOrange;
+        border-radius: 10px 10px 0 0;
+
+        .button {
+            color: $brightOrange;
+
+            &:hover {
+                color: $transparentWhite;
+            }
+        }
+    }
+
+    .card:nth-child(2) {
+        background-color: $darkCyan;
+
+        .button {
+            color: $darkCyan;
+
+            &:hover {
+                color: $transparentWhite;
+            }
+        }
+    }
+
+    .card:nth-child(3) {
+        background-color: $veryDarkCyan;
+        border-radius: 0 0 10px 10px;
+
+        .button {
+            color: $veryDarkCyan;
+
+            &:hover {
+                color: $transparentWhite;
+            }
+        }
+    }
+}
+
+// DESKTOP
+@media screen and (min-width: 1440px) {}
